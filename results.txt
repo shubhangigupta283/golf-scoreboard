@@ -1,0 +1,252 @@
+---------------------------------------------------------
+Test case 1 : Initialize
+ 
+Tournament Name: British Open
+Players participating:
+C  Montgomerie
+P  Fulke
+G  Owen
+J  Parnevik
+J  Ogilvie
+A  Cejka
+E  Romero
+N  Fasth
+---------------------------------------------------------
+Test Case 2 : leaderboard()
+ 
+leaderboard: [
+  {
+    "lastname": "Fulke",
+    "firstinitial": "P",
+    "score": -5,
+    "hole": "finished"
+  },
+  {
+    "lastname": "Romero",
+    "firstinitial": "E",
+    "score": -4,
+    "hole": 11
+  },
+  {
+    "lastname": "Montgomerie",
+    "firstinitial": "C",
+    "score": -3,
+    "hole": 17
+  },
+  {
+    "lastname": "Cejka",
+    "firstinitial": "A",
+    "score": -2,
+    "hole": 15
+  },
+  {
+    "lastname": "Owen",
+    "firstinitial": "G",
+    "score": -1,
+    "hole": "finished"
+  },
+  {
+    "lastname": "Ogilvie",
+    "firstinitial": "J",
+    "score": -1,
+    "hole": 7
+  },
+  {
+    "lastname": "Parnevik",
+    "firstinitial": "J",
+    "score": 0,
+    "hole": 12
+  },
+  {
+    "lastname": "Fasth",
+    "firstinitial": "N",
+    "score": 4,
+    "hole": "finished"
+  }
+]
+---------------------------------------------------------
+Test Case 3 : projectScoreByIndividual()
+ 
+projected Score : -1
+ 
+projected Score  : -7
+ 
+player with name xyz abc not found!
+projected Score : undefined
+ 
+player with name 0 3 not found!
+projected Score  : undefined
+ 
+---------------------------------------------------------
+Test Case 4 : projectScoreByHole()
+ 
+projected Score : -1
+ 
+player with name xyz abc not found!
+projected Score  : undefined
+ 
+player with name Taylor D not found!
+projected Score  : undefined
+ 
+player with name 0 false not found!
+projected Score  : undefined
+ 
+---------------------------------------------------------
+Test Case 5 : projectedLeaderboard()
+ 
+Verify with projectScoreByIndividual
+projected leaderboard : [
+  {
+    "lastname": "Montgomerie",
+    "firstinitial": "C",
+    "score": -2,
+    "hole": 14
+  },
+  {
+    "lastname": "Romero",
+    "firstinitial": "E",
+    "score": -1,
+    "hole": "finished"
+  },
+  {
+    "lastname": "Owen",
+    "firstinitial": "G",
+    "score": 0,
+    "hole": 18
+  },
+  {
+    "lastname": "Parnevik",
+    "firstinitial": "J",
+    "score": 1,
+    "hole": "finished"
+  },
+  {
+    "lastname": "Cejka",
+    "firstinitial": "A",
+    "score": 2,
+    "hole": 17
+  },
+  {
+    "lastname": "Fasth",
+    "firstinitial": "N",
+    "score": 1,
+    "hole": 11
+  },
+  {
+    "lastname": "Fulke",
+    "firstinitial": "P",
+    "score": 3,
+    "hole": 17
+  },
+  {
+    "lastname": "Ogilvie",
+    "firstinitial": "J",
+    "score": -1,
+    "hole": -1
+  }
+]
+ 
+Verify with projectScoreByHole
+projected leaderboard : [
+  {
+    "lastname": "Romero",
+    "firstinitial": "E",
+    "score": -1,
+    "hole": "finished"
+  },
+  {
+    "lastname": "Montgomerie",
+    "firstinitial": "C",
+    "score": -2,
+    "hole": 14
+  },
+  {
+    "lastname": "Owen",
+    "firstinitial": "G",
+    "score": 0,
+    "hole": 18
+  },
+  {
+    "lastname": "Parnevik",
+    "firstinitial": "J",
+    "score": 1,
+    "hole": "finished"
+  },
+  {
+    "lastname": "Cejka",
+    "firstinitial": "A",
+    "score": 2,
+    "hole": 17
+  },
+  {
+    "lastname": "Fasth",
+    "firstinitial": "N",
+    "score": 1,
+    "hole": 11
+  },
+  {
+    "lastname": "Ogilvie",
+    "firstinitial": "J",
+    "score": -1,
+    "hole": -1
+  },
+  {
+    "lastname": "Fulke",
+    "firstinitial": "P",
+    "score": 3,
+    "hole": 17
+  }
+]
+ 
+---------------------------------------------------------
+Test Case 6 :  printLeaderboard()
+ 
+--------------Leaderboard---------------
+Name :Fulke P | Score : -5 | Hole : finished
+Name :Romero E | Score : -4 | Hole : 11
+Name :Montgomerie C | Score : -3 | Hole : 17
+Name :Cejka A | Score : -2 | Hole : 15
+Name :Owen G | Score : -1 | Hole : finished
+Name :Ogilvie J | Score : -1 | Hole : 7
+Name :Parnevik J | Score : 0 | Hole : 12
+Name :Fasth N | Score : 4 | Hole : finished
+ 
+--------------Leaderboard---------------
+Name :Fulke P | Score : 0 | Hole : finished
+Name :Owen G | Score : 0 | Hole : finished
+Name :Fasth N | Score : 0 | Hole : finished
+Name :Montgomerie C | Score : 0 | Hole : 17
+Name :Cejka A | Score : 0 | Hole : 15
+Name :Parnevik J | Score : 0 | Hole : 12
+Name :Romero E | Score : 0 | Hole : 11
+Name :Ogilvie J | Score : 0 | Hole : 7
+---------------------------------------------------------
+Test Case 7 : postScore() 
+ 
+player has already finished the round
+ 
+score posted for player : Montgomerie C
+ 
+score posted for player : Owen G
+ 
+player has already finished the round
+ 
+score posted for player : Cejka A
+ 
+LeaderBoard after the post scores : 
+--------------Leaderboard---------------
+Name :Montgomerie C | Score : -10 | Hole : 15
+Name :Cejka A | Score : -3 | Hole : finished
+Name :Romero E | Score : -1 | Hole : finished
+Name :Ogilvie J | Score : -1 | Hole : -1
+Name :Owen G | Score : 0 | Hole : 18
+Name :Parnevik J | Score : 1 | Hole : finished
+Name :Fasth N | Score : 1 | Hole : 11
+Name :Fulke P | Score : 3 | Hole : 17
+---------------------------------------------------------
+Test Case 8 : isTournamentCompleted()
+isTournamentCompleted: false
+ 
+Tournament Completed !!
+WINNER -> Romero,-1
+isTournamentCompleted: true
